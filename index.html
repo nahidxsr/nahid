@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Download</title>
+</head>
+<body>
+    <h1>Upload and Download Files</h1>
+    
+    <!-- File Upload Section -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Choose file to upload:</label>
+        <input type="file" id="file" name="file">
+        <button type="submit">Upload File</button>
+    </form>
+
+    <!-- File Download Section -->
+    <h2>Download Available Files:</h2>
+    <ul>
+        <li><a href="files/example1.txt" download>Download example1.txt</a></li>
+        <li><a href="files/example2.txt" download>Download example2.txt</a></li>
+    </ul>
+</body>
+</html>
