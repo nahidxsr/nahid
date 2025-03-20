@@ -1,0 +1,34 @@
+// সোশ্যাল মিডিয়া লোগো ও লিংক সেট করা
+const socialMedia = [
+    { name: "Facebook", logo: "icons/facebook.png", link: "https://facebook.com" },
+    { name: "Twitter", logo: "icons/twitter.png", link: "https://twitter.com" },
+    { name: "Instagram", logo: "icons/instagram.png", link: "https://instagram.com" },
+    { name: "GitHub", logo: "icons/github.png", link: "https://github.com" }
+];
+
+const socialLinksContainer = document.getElementById("socialLinks");
+
+socialMedia.forEach((media, index) => {
+    let anchor = document.createElement("a");
+    anchor.href = media.link;
+    anchor.target = "_blank";
+
+    let img = document.createElement("img");
+    img.src = media.logo;
+    img.alt = media.name;
+
+    // একটু দেরিতে আইকন দেখানোর জন্য delay
+    anchor.style.animation = `fadeInUp 0.5s ${index * 0.2}s forwards`;
+
+    anchor.appendChild(img);
+    socialLinksContainer.appendChild(anchor);
+});
+
+// এনিমেশন ডিলে সেট করা (সুন্দর ভিউর জন্য)
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        document.querySelectorAll(".fade-in").forEach((element, index) => {
+            element.style.animationDelay = `${index * 0.2}s`;
+        });
+    }, 500);
+});
