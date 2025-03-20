@@ -1,0 +1,116 @@
+/* গ্লোবাল স্টাইল */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* প্রোফাইল কার্ড */
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* প্রোফাইল ইমেজ */
+.profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ff7e5f;
+}
+
+/* স্ট্যাটস */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+/* সোশ্যাল মিডিয়া লিংক */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+/* সোশ্যাল মিডিয়া আইকনের ডিজাইন */
+.social-links a {
+    width: 45px;  /* আইকনের ব্যাকগ্রাউন্ড গোলাকার অংশের সাইজ */
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* লোগো যেন গোলাকার অংশের বাইরে না যায় */
+}
+
+/* PNG লোগোর সঠিক সাইজ */
+.social-links img {
+    width: 25px;  /* লোগোর নির্দিষ্ট সাইজ */
+    height: 25px;
+    object-fit: contain; /* যাতে লোগোর আসল অনুপাত ঠিক থাকে */
+}
+
+/* হোভার ইফেক্ট */
+.social-links a:hover {
+    transform: scale(1.2);
+}
+/* বাটন ডিজাইন */
+.buttons button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.message {
+    background: #3498db;
+    color: white;
+}
+
+.follow {
+    background: #e74c3c;
+    color: white;
+}
+
+/* বাটন প্রেস করলে এনিমেশন */
+.buttons button:active {
+    transform: scale(0.9);
+}
+
+/* ফেড-ইন এনিমেশন */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ফেড-ইন ক্লাস */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
