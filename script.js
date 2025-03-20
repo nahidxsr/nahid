@@ -1,9 +1,9 @@
 // সোশ্যাল মিডিয়া লোগো ও লিংক সেট করা
 const socialMedia = [
-    { name: "Facebook", logo: "icons/facebook.png", link: "https://facebook.com" },
-    { name: "Twitter", logo: "icons/twitter.png", link: "https://twitter.com" },
-    { name: "Instagram", logo: "icons/instagram.png", link: "https://instagram.com" },
-    { name: "GitHub", logo: "icons/github.png", link: "https://github.com" }
+    { name: "Facebook", logo: "icons8-whatsapp-30.png", link: "https://facebook.com" },
+    { name: "Twitter", logo: "icons8-telegram-50.png", link: "https://twitter.com" },
+    { name: "Instagram", logo: "icons8-instagram-logo-30.png", link: "https://instagram.com" },
+    { name: "GitHub", logo: "icons8-github-logo-30.png", link: "https://github.com" }
 ];
 
 const socialLinksContainer = document.getElementById("socialLinks");
