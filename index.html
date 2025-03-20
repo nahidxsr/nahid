@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Upload and Download</title>
+    <title>প্রোফাইল কার্ড</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Upload and Download Files</h1>
-    
-    <!-- File Upload Section -->
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <label for="file">Choose file to upload:</label>
-        <input type="file" id="file" name="file">
-        <button type="submit">Upload File</button>
-    </form>
+    <div class="profile-card">
+        <div class="profile-image">
+            <img src="profile.jpg" alt="Profile Picture">
+        </div>
+        <h2 class="fade-in">Muhammed Erdem</h2>
+        <p class="fade-in">Front-end Developer from Mesopotamia</p>
+        <p class="fade-in location"><i>📍</i> Istanbul, Turkey</p>
 
-    <!-- File Download Section -->
-    <h2>Download Available Files:</h2>
-    <ul>
-        <li><a href="files/example1.txt" download>Download example1.txt</a></li>
-        <li><a href="files/example2.txt" download>Download example2.txt</a></li>
-    </ul>
+        <div class="stats fade-in">
+            <div><strong>1598</strong> Followers</div>
+            <div><strong>65</strong> Following</div>
+            <div><strong>123</strong> Articles</div>
+            <div><strong>85</strong> Works</div>
+        </div>
+
+        <!-- সোশ্যাল মিডিয়া লিঙ্ক -->
+        <div class="social-links fade-in" id="socialLinks"></div>
+
+        <div class="buttons fade-in">
+            <button class="message">Message</button>
+            <button class="follow">Follow</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
